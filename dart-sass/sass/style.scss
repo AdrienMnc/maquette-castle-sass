@@ -1,0 +1,301 @@
+@import "../libs/reset.scss";
+
+/**
+ * style.css - Style principal de la page
+ */
+
+/**
+ * Polices
+ */
+
+/* Moon Dance */
+@font-face {
+  font-family: "Moon Dance";
+  src: url("../../assets/fonts/Moon_Dance/MoonDance-Regular.ttf");
+}
+
+/* Poppins */
+@font-face {
+  font-family: "Poppins";
+  src: url("../../assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../assets/fonts/Poppins/Poppins-Light.ttf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../../assets/fonts/Poppins/Poppins-Bold.ttf");
+  font-weight: bold;
+}
+
+/* A FAIRE: Implémenter le style de la page selon la maquette */
+
+body {
+  background-color: #1f1f1f;
+  color: white;
+  font-family: "Poppins";
+}
+
+.yellowBar {
+  background-color: #ecd537;
+  width: 100%;
+  height: 5px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 101;
+}
+
+/* Barre de Navigation*/
+nav {
+  background-color: #1f1f1f;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+
+  img {
+    width: 215px;
+    padding: 10px 0px 7px 10px;
+  }
+
+  .links-container {
+    display: flex;
+    gap: 20px;
+    float: right;
+    margin: 0px 20px 2px;
+    padding-left: 20px;
+    padding-top: 20px;
+    height: 64px;
+  }
+
+  li {
+    display: inline-block;
+    height: 50px;
+    padding: 7px 10px;
+    margin-bottom: 5px;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .yellowBlockNav {
+    width: 10px;
+    height: 10px;
+    margin-top: 15px;
+    background-color: #ecd537;
+  }
+}
+
+/* En-Tête*/
+header {
+  min-height: 100vh;
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  background-image: url(../../assets/images/altenstein-castle.jpg);
+
+  //   Je n'arrive pas à mettre un filtre sur uniquement la photo de fond
+  &:before {
+    filter: brightness(50%);
+  }
+
+  .header-content {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 20vh;
+  }
+
+  p {
+    font-size: 30px;
+    text-shadow: 2px 1px 2px black;
+  }
+
+  h1 {
+    font-family: "Moon Dance";
+    font-size: 130px;
+    text-shadow: 2px 1px 2px black;
+  }
+
+  button {
+    background-color: #ecd537;
+    color: white;
+    border-style: none;
+    border-radius: 3px;
+    padding: 10px 25px;
+    font-size: 15px;
+    margin-top: 25px;
+
+    &:hover {
+      background-color: white;
+      color: #ecd537;
+    }
+  }
+}
+
+/* Section Concept*/
+
+#concept {
+  .yellowBlockConcept {
+    width: 10px;
+    height: 10px;
+    margin-top: 59px;
+    background-color: #ecd537;
+  }
+
+  .alignConceptTitle {
+    display: flex;
+    justify-content: center;
+
+    h1 {
+      padding: 40px;
+      font-size: 30px;
+    }
+  }
+
+  .alignConceptService {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5%;
+
+    .whiteBlock {
+      background-color: white;
+      color: #1f1f1f;
+      width: 259px;
+      height: 190px;
+      border-radius: 5px;
+      margin-bottom: 3%;
+
+      span {
+        display: flex;
+        justify-content: center;
+        padding: 30px 0px 30px 0px;
+        font-size: 50px;
+        color: #1f1f1f;
+      }
+
+      p {
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+/* Section Châteaux*/
+#castle {
+  .yellowBlockCastle {
+    width: 10px;
+    height: 10px;
+    margin-top: 59px;
+    background-color: #ecd537;
+  }
+
+  .alignCastleTitle {
+    display: flex;
+    justify-content: center;
+
+    h1 {
+      padding: 40px;
+      font-size: 30px;
+    }
+  }
+
+  img {
+    height: 229px;
+  }
+
+  .alignPictureBlockHigh {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+
+    .pictureBlock {
+      width: 340px;
+      margin-bottom: 1%;
+    }
+  }
+
+  .alignPictureBlockLow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .pictureBlock {
+      width: 489px;
+    }
+  }
+}
+
+/* Section Contact*/
+#contact {
+  .yellowBlockContact {
+    width: 10px;
+    height: 10px;
+    margin-top: 59px;
+    background-color: #ecd537;
+  }
+
+  .alignContactTitle {
+    display: flex;
+    justify-content: center;
+
+    h1 {
+      padding: 40px;
+      font-size: 30px;
+    }
+  }
+
+  .alignInformationsAndLogo {
+    display: flex;
+    gap: 2%;
+  }
+
+  .contactInformations {
+    margin-left: 30%;
+  }
+
+  .logo {
+    background-color: white;
+    color: #1f1f1f;
+    border-radius: 5px;
+    margin-bottom: 3%;
+
+    span {
+      display: flex;
+      justify-content: center;
+      padding: 5px;
+    }
+  }
+}
+
+/* Footer*/
+
+footer {
+  padding-top: 50px;
+  text-align: center;
+}
+
+// Je n'arrive pas à faire un import de mes media querry donc fuck ca va ici
+
+@media screen and (max-width: 549px) {
+  nav {
+    display: block;
+
+    img {
+      margin-left: 50px;
+    }
+  }
+}
